@@ -12,7 +12,8 @@ class TodoistApi:
         response = requests.post(
             self.url,
             json={
-                "content": task,
+            "content": task,
+            "due_string": "today",
             },
             headers={
                 "Authorization": "Bearer %s" % self.token,
